@@ -10,6 +10,7 @@ def root():
 
 @app.route('/api/alarma/sonar')
 def alarma_sonar():
+    ''' localhost:5000/api/alarma/sonar?hora-alarma=07:00&hora-actual=08:00'''
     reloj = Reloj()
     halarma = request.args.get("hora-alarma")
     reloj.definir_alarma(halarma)
